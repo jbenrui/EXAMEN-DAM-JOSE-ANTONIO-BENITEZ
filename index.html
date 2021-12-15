@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="topNavResponsive_files/font-awesome.css">
+    <link rel="stylesheet" href="./styles/estilo.css">
+    <script src="./javascripts/javascripts.js"></script>
+    <title>Machine Learning</title>
+    <script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+            scrollTop: $(hash).offset().top
+            }, 600, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+            });
+        } // End if
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="#hero" class="active">Home</a>
+                <a href="#introduction">Models of AI</a>
+                <a href="#galeria">Types of ML</a>
+                <a href="#galeria">Uses</a>
+                <a href="#credits">Credits</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                &#9776;
+                </a>
+        </nav>
+        <section id="hero">
+            <h2>Machine <br> Learning</h2>
+        </section>
+        <section id="introduction">
+            <h2> Models of AI</h2>
+            
+            <h3> Whats Is An AI Model?</h3>
+            <img src="./images/owl-or-apple.png" alt="owl-or-apple">
+            <p>AI or Artificial Intelligence is a subfield within computer science associated with constructing 
+                machines that can simulate human intelligence.
+                <br>
+                <br>
+                An AI model is a program or algorithm that utilizes a set of data that enables it to recognize certain 
+                patterns. This allows it to reach a conclusion or make a prediction when provided with sufficient information.
+                <br>
+                <br>
+                This is especially useful for solving complex problems using huge amounts of data with high accuracy and minimum costs. 
+            </p>
+            
+            <p>
+                Machine Learning is a subset within AI associated with providing machines the ability to learn from experience without the need to be programmed explicitly, so in a nutshell, ML or machine learning is a part of AI. 
+                <br>
+                <br>
+                <small>Upper Image: Barn owl or apple? Image recognition tasks can be equally challenging for AI models and humans. – Source @teenybiscuit</small>
+            </p>
+        </section>
+        <br>
+        <br>
+        <br>
+        <section id="galeria">
+            <h2>Types of ML</h2>
+            <div>
+                <div class="grid-2">
+                    <div>
+                        <div class="item-grid-2">
+                            <h3>Supervised<br> Learning</h3>
+                            <img src="./images/supervised.png" alt="supervised">
+                            <br>
+                            <button id="myBtn">Learn more</button> 
+                            <br>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-grid-2">
+                            <h3>Unsupervised<br>Learning</h3>
+                            <img src="./images/unsupervised.png" alt="unsupervised">
+                            <br>
+                            <button id="myBtn">Learn more</button> 
+                            <br>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div id="reinforced" class="item-grid-2">
+                            <h3>Reinforced<br> Learning</h3>
+                            <img src="./images/reinforced.png" alt="reinforced">
+                            <br>
+                            <button id="myBtn">Learn more</button> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <footer id="credits">
+            <p>
+                <b>Examen de HTML/CSS/JS - Curso 2021/22</b>
+                <br>
+                <b>Autor: Jose Antonio Benitez Ruiz</b>
+                <br>
+                <b>IES Campanillas - Málaga</b>
+            </p>
+        </footer>
+    </div>
+    
+</body>
+</html>

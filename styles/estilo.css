@@ -1,0 +1,232 @@
+@font-face {
+    font-family: title;
+    src: url("../fonts/bitwise.regular.ttf");
+}
+@font-face {
+    font-family: parrafos;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+body {
+    background-image: url("../images/bit-pattern.jpg") ;
+}
+
+/*Barra de navegacion*/
+nav {
+    top: 0;
+    position: sticky;
+    z-index: 99;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    font-family: title;
+    
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+}
+
+.topnav a:hover {
+    background-color: rgba(0, 217, 255, 0.801);
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+/*Estilo del container*/
+#container{
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    position: relative;
+    margin: auto;
+    padding: 0;
+}
+#container p{
+    
+    font-family: parrafos;
+}
+#container h2{
+    font-family: titulos;
+}
+/*Estilo de la hero*/
+#hero{
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: 75% ;
+    position: relative;
+    height: 95vh;
+}
+#hero h2{
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 20px;
+    color: rgb(8, 187, 163);
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: -6px 6px 15px #ddd;
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    font-size: 40px;
+    font-family: title;
+}
+/*Estilo Introduccion*/
+#introduction img{
+    width: 25%;
+    padding: 1% 20% 5% 1%;
+    float: right;
+}
+#introduction {color:rgb(248, 248, 248);
+    font-family:parrafos;
+    width: 80%;
+    background-color: black ;
+    padding:4% 8%;
+}
+
+#introduction h2 {font-family:title;
+    color: rgb(0, 255, 221);
+    box-shadow: -6px 6px 15px #ddd;
+    display: table;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 30px auto;
+    text-align:center;
+    font-size:2.5em;}
+
+#introduction h3 {font-family:title;
+    color: rgb(0, 255, 221);
+    text-align:left;
+    font-size:1.5em;}
+
+#introduction p {font-size:1em;
+        text-align:justify;}
+
+/*Estilo de la Galeria*/
+.grid-2 {display:grid;
+    grid-template-columns:auto auto auto;
+    }
+.item-grid-2 {
+    padding: 10px;
+    box-shadow: 0px 0px -6px 3px white;
+    margin:30px;
+    width: 75%;
+    font-size:0.8em;
+    border: 1px solid lightgrey;
+}
+
+.item-grid-2 img{
+    margin: auto;
+    border-radius: 180%;
+    display:block;
+    
+}
+.item-grid-2 button { background-color:#00fff2;
+    padding: 15px;
+    color:rgb(0, 0, 0);
+    font-weight:bold;
+    font-family: parrafos;
+    top: 0;
+    display:block;
+    margin:auto;
+    }
+
+#galeria{
+    margin: auto;
+}
+#galeria h2 {font-family:title;
+    color: rgb(0, 255, 221);
+    box-shadow: -6px 6px 15px #ddd;
+    display: table;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 30px auto;
+    text-align:center;
+    font-size:2.5em;
+    border-radius: 10px;
+    box-shadow: -6px 6px 15px #ddd;
+}
+#galeria h3 {font-family:title;
+    color: rgb(0, 255, 221);
+    text-align:center;
+    font-size:1.5em;}
+
+#credits {
+    background-color: #00fff2;
+    color: black;
+    text-align: center;
+}
+@media screen and (max-width: 1050px) {
+    #container{width:100%}
+    .grid-2 {grid-template-columns: auto auto;}
+    .center{
+        position: relative;
+        left: 50%;
+    }
+    #reinforced {
+        padding: 10px;
+    box-shadow: 0px 0px -6px 3px white;
+    margin:30px;
+    width: 75%;
+    font-size:0.8em;
+    border: 1px solid lightgrey
+    }
+    #reinforced img{
+        margin: auto;
+        border-radius: 180%;
+        float:center;
+        display:block;
+    }
+    #reinforced button { background-color:#00fff2;
+        padding: 15px;
+        color:rgb(0, 0, 0);
+        font-weight:bold;
+        font-family: parrafos;
+        top: 0;
+        display:block;
+        margin:auto;
+        }
+    #introduction img {
+        width: 30%;
+        padding: 10% 5% 1% 3%;
+        float: right;
+    }
+}
+@media screen and (max-width: 600px) {
+    #container{width:100%}
+    .grid-2 {grid-template-columns: 100%;}
+    #introduction img {
+        width: 90%;
+        padding: 15px;
+        float: none;
+    }
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container{width:100%}
+    .grid-2 {grid-template-columns: 100%;}
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
